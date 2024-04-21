@@ -1,0 +1,9 @@
+.parent-container{
+  display: flex;
+}
+.content{
+  width: 100%;
+}
+.sidebar{
+  min-height: 1000px;
+}
