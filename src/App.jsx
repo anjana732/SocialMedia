@@ -5,8 +5,11 @@ import Footer from "./components/Footer"
 import CreatePost from "./components/CreatePost";
 import "./App.css";
 import PostList from "./components/PostList";
+import { useState } from "react";
 
 function App() {
+
+  const [selectedTab, setSelectedTab] = useState("Home")
 
   return (
   
@@ -16,8 +19,7 @@ function App() {
       </div>
       <div className="content">
       <Header></Header>
-      <CreatePost></CreatePost>
-      <PostList></PostList>
+      {selectedTab === "Home" ? <PostList></PostList> : <CreatePost></CreatePost>}
       <Footer></Footer>
       </div>
      
